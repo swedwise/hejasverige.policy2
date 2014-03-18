@@ -27,8 +27,10 @@ setup(name='hejasverige.policy2',
           'setuptools',
           'Plone',
           'webcouturier.dropdownmenu',
+          'hejasverige.megabank',
           'hejasverige.theme2',
           'collective.cover',
+          'collective.onlogin',
           # -*- Extra requirements: -*-
       ],
       extras_require={
