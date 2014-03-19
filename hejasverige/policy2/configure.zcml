@@ -17,5 +17,11 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
       
+  <browser:page
+      for="Products.CMFPlone.Portal.PloneSite"
+      name="personal-information"
+      class=".personalpreferencesoverride.CustomizedUserDataPanel"
+      permission="cmf.SetOwnProperties"
+      />
 
 </configure>

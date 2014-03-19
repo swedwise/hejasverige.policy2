@@ -2,7 +2,10 @@
 <metadata>
   <version>1</version>
   <dependencies>
-  	<dependency>profile-hejasverige.theme2:default</dependency>
   	<dependency>profile-webcouturier.dropdownmenu:default</dependency>
+  	<dependency>profile-hejasverige.theme2:default</dependency>
+  	<dependency>profile-hejasverige.megabank:default</dependency>
+  	<dependency>profile-hejasverige.content:default</dependency>
+  	<dependency>profile-hejasverige.kollkoll:default</dependency>
   </dependencies>
 </metadata>
