@@ -36,6 +36,7 @@ setup(name='hejasverige.policy2',
           'hejasverige.wizard',
           'collective.cover',
           'collective.onlogin',
+          'collective.monkeypatcher',
           #'Products.Doormat',
           # -*- Extra requirements: -*-
       ],
