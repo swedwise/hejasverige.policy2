@@ -13,6 +13,7 @@ from zope.component import getMultiAdapter
 
 from zope.component import getUtility
 from Products.CMFCore.interfaces import ISiteRoot
+from plone import api
 
 import logging
 logger = logging.getLogger(__name__)
@@ -44,7 +45,8 @@ def personal_id_already_registered(value):
 
     mtool = getToolByName(portal, 'portal_membership')
     members = [member for member in mtool.listMembers()
-               if member.getProperty('personal_id') == value]
+               if member.getProperty('personal_id') == value 
+               and member != api.user.get_current()]
 
     if members:
         return True

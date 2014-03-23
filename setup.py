@@ -31,9 +31,10 @@ setup(name='hejasverige.policy2',
           'hejasverige.theme2',
           'hejasverige.content',
           'hejasverige.kollkoll',
-          #'hejasverige.api',
+          'hejasverige.api',
           'collective.cover',
           'collective.onlogin',
+          #'Products.Doormat',
           # -*- Extra requirements: -*-
       ],
       extras_require={

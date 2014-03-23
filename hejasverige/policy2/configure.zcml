@@ -16,7 +16,14 @@
       description="Turns a site into a Heja Sverige Site"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-      
+
+   <genericsetup:importStep
+      name="hejasverige-policy2-various"
+      title="Additional Heja Sverige Policy setup"
+      description="Heja Sverige Policy site configuration"
+      handler="hejasverige.policy2.setuphandler.importVarious" 
+      />
+
   <browser:page
       for="Products.CMFPlone.Portal.PloneSite"
       name="personal-information"
