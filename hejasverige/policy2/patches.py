@@ -16,7 +16,11 @@ def patchedRemoveForwardIndexEntry(self, entry, documentId):
     #print 'PATCH: removeForwardIndexEntry -> patchedRemoveForwardIndexEntry'
     
     #entry = safe_unicode(entry)
-    entry = entry.encode('utf-8')
+    try:
+        tmp = entry.encode('utf-8')
+        entry = tmp
+    except:
+        pass
 
     indexRow = self._index.get(entry, _marker)
     if indexRow is not _marker:
@@ -64,7 +68,11 @@ def patchedInsertForwardIndexEntry(self, entry, documentId):
 
     # this makes it possible to import external xml data but distroys when creating invoices
     # what to do? what to do?
-    entry = entry.encode('utf-8')
+    try:
+        tmp = entry.encode('utf-8')
+        entry = tmp
+    except:
+        pass
     indexRow = self._index.get(entry, _marker)
 
     # Make sure there's actually a row there already. If not, create
