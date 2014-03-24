@@ -32,7 +32,7 @@
       permission="cmf.SetOwnProperties"
       />
 
-  <!--include package="collective.monkeypatcher" />
+  <include package="collective.monkeypatcher" />
 
   <monkey:patch
       description="This works around problems with handling the forward index unicode from the external club import"
@@ -55,7 +55,7 @@
       />
 
 
-  <monkey:patch
+  <!--monkey:patch
       description="Impossible to register new users with ÅÄÖ in fullname. Handles unicode error in zope.formlib.textwidgets.TextWidget"
       class="zope.formlib.textwidgets.TextWidget"
       original="_toFieldValue"
