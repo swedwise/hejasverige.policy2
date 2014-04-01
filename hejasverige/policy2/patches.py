@@ -150,3 +150,21 @@ def _patchedToFieldValue(self, input):
         except ValueError, v:
             raise ConversionError(_("Invalid text data"), v)
     return value
+
+
+from zope.interface import directlyProvides
+from zope.schema.interfaces import ITitledTokenizedTerm
+
+def patched__init__(self, value, token=None, title=None):
+    """Create a term for value and token. If token is omitted,
+    str(value) is used for the token.  If title is provided,
+    term implements ITitledTokenizedTerm.
+    """
+    #print 'using patchedSimpleTerm'
+    self.value = value
+    if token is None:
+        token = value
+    self.token = token
+    self.title = title
+    if title is not None:
+        directlyProvides(self, ITitledTokenizedTerm)

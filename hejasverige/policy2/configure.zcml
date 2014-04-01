@@ -54,6 +54,13 @@
       replacement=".patches.patchedGetInfoData"
       />
 
+  <monkey:patch
+      description="Treats tokens in SimpleTerms not as string since they are Unicode"
+      class="zope.schema.vocabulary.SimpleTerm"
+      original="__init__"
+      replacement=".patches.patched__init__"
+      />
+
 
   <!--monkey:patch
       description="Impossible to register new users with ÅÄÖ in fullname. Handles unicode error in zope.formlib.textwidgets.TextWidget"
