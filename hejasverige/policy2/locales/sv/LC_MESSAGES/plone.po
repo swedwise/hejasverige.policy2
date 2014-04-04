@@ -1,0 +1,5 @@
+#. Default: "You have been registered."
+#: CMFPlone/skins/plone_login/registered.pt:25
+#: from plone.app.locales-4.3-py2.7.egg/plone/app/locales/locales/sv/LC_MESSAGES/plone.po
+msgid "description_you_are_registered"
+msgstr "Du har nu registrerats som medlem i Heja Sverige."
